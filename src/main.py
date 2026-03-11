@@ -1,9 +1,5 @@
 import tkinter as tk
 
-def main():
-    print("Hello, World!")
-
-
 def GUI():
     root = tk.Tk()
     root.title("Scraper GUI")
@@ -29,5 +25,4 @@ def Scrape():
     print("Scraping data...")
 
 if __name__ == "__main__":
-    main()
     GUI()
