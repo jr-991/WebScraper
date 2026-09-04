@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import scraper
 
 def GUI():
     root = tk.Tk()
@@ -15,7 +15,7 @@ def GUI():
     label = tk.Label(topFrame, text="Pull latest: ", font=("Arial", 16))
     label.pack(side='left', padx=(0, 5))
 
-    pullButton = tk.Button(topFrame, text = "↓", command = Scrape)
+    pullButton = tk.Button(topFrame, text = "↓", command = pullLatest)
     pullButton.pack(side='left')
     
     dataFrame = tk.Frame(frame, bg="lightgrey", width=1280, height=720)
@@ -23,8 +23,8 @@ def GUI():
     
     root.mainloop()
 
-def Scrape():
-    print("Fetching data...")
+def pullLatest():
+    scraper.fetch()
 
 if __name__ == "__main__":
     GUI()
